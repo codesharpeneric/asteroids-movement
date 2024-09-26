@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwjborihwe02y"]
+
+[ext_resource type="Texture2D" uid="uid://1nak76e5i5yg" path="res://ship.png" id="1_4v2gm"]
+[ext_resource type="Texture2D" uid="uid://mqat4cqjgysp" path="res://starscape.png" id="2_843bw"]
+[ext_resource type="Script" path="res://ship.gd" id="2_gm86a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x47vu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4v2gm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wxjm"]
+radius = 16.0
+height = 84.0
+
+[node name="Main" type="Node"]
+
+[node name="Starscape" type="Sprite2D" parent="."]
+position = Vector2(615, 293)
+scale = Vector2(1.623, 1.286)
+texture = ExtResource("2_843bw")
+
+[node name="Ship" type="CharacterBody2D" parent="."]
+position = Vector2(578, 513)
+safe_margin = 2.0
+script = ExtResource("2_gm86a")
+metadata/_edit_group_ = true
+
+[node name="ShipSprite" type="AnimatedSprite2D" parent="Ship"]
+z_index = 1
+position = Vector2(-2, -3)
+scale = Vector2(0.128049, 0.107447)
+sprite_frames = SubResource("SpriteFrames_x47vu")
+
+[node name="ShipCollisionShape" type="CollisionShape2D" parent="Ship"]
+position = Vector2(-2, 3)
+shape = SubResource("CapsuleShape2D_5wxjm")

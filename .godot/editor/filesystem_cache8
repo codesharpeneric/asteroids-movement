@@ -1,0 +1,9 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1727344231
+export_presets.cfg::TextFile::-1::1727268107::0::1::::<><>::
+icon.svg::CompressedTexture2D::294748720094772982::1727267144::1727267151::1::::<><>::
+main.tscn::PackedScene::3949241267226808690::1727267441::0::1::::<><>::uid://1nak76e5i5yg::::res://ship.png<>uid://mqat4cqjgysp::::res://starscape.png<>res://ship.gd
+README.md::TextFile::-1::1727157957::0::1::::<><>::
+ship.gd::GDScript::-1::1727267399::0::1::::<>CharacterBody2D<>::
+ship.png::CompressedTexture2D::1851766432188991246::1727159993::1727160000::1::::<><>::
+starscape.png::CompressedTexture2D::875331624811559059::1727161791::1727161797::1::::<><>::
